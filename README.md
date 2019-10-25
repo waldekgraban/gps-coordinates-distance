@@ -9,6 +9,9 @@ Just enter the coordinates:
     $point_a = new Point(54.406745, 18.666948);
     $point_b = new Point(49.251006, 19.934036);
 
-That's all - we get the distance in a variable **$result** .
+If you want the result in kilometers, just set true. Otherwise you will receive miles.
 
+    $result = getDistance($point_a, $point_b, $kilometers = true);
+
+That's all - we get the distance in a variable **$result** .
 
