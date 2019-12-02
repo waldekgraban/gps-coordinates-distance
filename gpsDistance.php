@@ -7,13 +7,17 @@
 
 function getDistance($point_a, $point_b, $kilometers)
 {
-    $distance = sin(deg2rad($point_a->lat)) * sin(deg2rad($point_b->lat)) + cos(deg2rad($point_a->lat)) * cos(deg2rad($point_b->lat)) * cos(deg2rad($point_a->lon - $point_b->lon));
-    $distance = acos($distance);
-    $distance = rad2deg($distance);
-    $miles    = $distance * 60 * 1.1515;
+    $distance = sin(deg2rad($point_a->lat)) * sin(deg2rad($point_b->lat)) +
+                cos(deg2rad($point_a->lat)) * cos(deg2rad($point_b->lat)) *
+                cos(deg2rad($point_a->lon - $point_b->lon));
+
+    $distance   = acos($distance);
+    $distance   = rad2deg($distance);
+    $miles      = $distance * 60 * 1.1515;
+    $kilometers = $miles * 1.609344;
 
     $distanceUnit = ($kilometers)
-        ? ($miles * 1.609344)
+        ? $kilometers
         : $miles;
 
     return $distanceUnit;
