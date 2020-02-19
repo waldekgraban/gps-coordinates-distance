@@ -1,5 +1,6 @@
 {
-    "name": "waldekgraban/polish_caves_scanner",
+    "name": "waldekgraban/gps-coordinates-distance",
+    "description":"Get the distance between two GPS coordinates in kilometers or miles. ",
     "type": "library",
     "license": "MIT",
     "authors": [{
