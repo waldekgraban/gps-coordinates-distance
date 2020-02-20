@@ -13,4 +13,18 @@ class PointTest extends TestCase
 
         $this->assertInstanceOf(Point::class, $point);
     }
+
+    public function testPointLatitudeAreNumbers()
+    {
+        $testPlace = new Point(54.377464, 18.608775);
+
+        $this->assertIsFloat($testPlace->lat);
+    }
+
+    public function testPointLongtudeAreNumbers()
+    {
+        $testPlace = new Point(54.377464, 18.608775);
+
+        $this->assertIsFloat($testPlace->lon);
+    }
 }
